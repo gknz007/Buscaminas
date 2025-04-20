@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscaminas Moderno</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Buscaminas</h1>
+    <div id="status">
+        Minas restantes: <span id="mineCounter">0</span> | Tiempo: <span id="timer">0</span> segundos
+      </div>
+    <div class="controls">
+        <button id="toggleDarkMode">Modo Oscuro</button>
+        <button id="resetBtn">Reiniciar</button>
+      <label for="difficulty">Dificultad:</label>
+      <select id="difficulty">
+        <option value="beginner">Principiante (8x8, 10 minas)</option>
+        <option value="intermediate">Intermedio (16x16, 40 minas)</option>
+        <option value="expert">Experto (16x30, 99 minas)</option>
+        <option value="custom">Personalizado</option>
+      </select>
+
+      <div id="custom-settings" class="hidden">
+        <input type="number" id="custom-rows" placeholder="Filas" min="1">
+        <input type="number" id="custom-cols" placeholder="Columnas" min="1">
+        <input type="number" id="custom-mines" placeholder="Minas" min="1">
+      </div>
+
+      <label for="mineImage">Imagen de mina:</label>
+      <input type="file" id="mineImage" accept="image/png, image/jpeg">
+
+      <button id="startBtn">Iniciar Juego</button>
+    </div>
+
+    <div id="board" class="board"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
