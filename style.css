@@ -1,0 +1,108 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  .controls input,
+  .controls select,
+  .controls button {
+    margin: 5px;
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .board {
+    display: grid;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 2px;
+    overflow: auto;
+    max-width: 100%;
+    touch-action: manipulation;
+  }
+  
+  
+    .cell {
+        width: 6vw;
+        height: 6vw;
+        max-width: 30px;
+        max-height: 30px;
+        min-width: 20px;
+        min-height: 20px;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+      }
+      
+  
+  .cell.revealed {
+    background-color: #e0e0e0;
+    cursor: default;
+  }
+  
+  .cell.mine img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @media (max-width: 600px) {
+    body {
+      padding: 10px;
+    }
+  
+    .controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .controls input,
+    .controls select,
+    .controls button {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+  
+    #status {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  }
+  body.dark {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+  
+  body.dark .cell {
+    background-color: #1e1e1e;
+    border: 1px solid #555;
+    color: #fff;
+  }
+  
+  body.dark .cell.revealed {
+    background-color: #2a2a2a;
+  }
+    
